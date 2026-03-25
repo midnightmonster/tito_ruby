@@ -1,0 +1,7 @@
+/.bundle/
+/vendor/
+/Gemfile.lock
+/.env
+/test/.env
+*.gem
+/test/cassettes/*.yml
