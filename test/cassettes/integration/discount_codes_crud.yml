@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/discount_codes
+    body:
+      encoding: UTF-8
+      string: '{"discount_code":{"code":"INTEGRATIONTEST","type":"PercentOffDiscountCode","value":"0.25e2"}}'
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Location:
+      - https://api.tito.io/<TITO_ACCOUNT>/test-event-1/discount_codes/9285710
+      Vary:
+      - Accept
+      Etag:
+      - W/"b95748f6bda9a37bb8aa7a6826fdfe25"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - 3a0471fe7ff114d3ff9c4bad80816f1a
+      X-Runtime:
+      - '0.095644'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"discount_code":{"_type":"discount_code","id":9285710,"code":"INTEGRATIONTEST","description":"Sell
+        for 25.0% less. Unlimited. Applies to 0 tickets. Not used yet.","description_for_organizer":null,"end_at":null,"max_quantity_per_release":null,"min_quantity_per_release":null,"only_show_attached":false,"quantity":null,"quantity_used":0,"registrations_count":0,"reveal_secret":false,"show_public_releases":"all","show_secret_releases":"none","share_url":"https://ti.to/<TITO_ACCOUNT>/test-event-1/discount/INTEGRATIONTEST","start_at":null,"state":"current","tickets_count":0,"type":"PercentOffDiscountCode","value":"25.0","block_registrations_if_not_applicable":false,"disable_for_degressive":false},"meta":{"api_version":"3.1.0"}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:25 GMT
+- request:
+    method: delete
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/discount_codes/9285710
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:25 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - ee074c6836d3e665ff1258935c5c248d
+      X-Runtime:
+      - '0.096186'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 28 Mar 2026 21:56:25 GMT
+recorded_with: VCR 6.4.0

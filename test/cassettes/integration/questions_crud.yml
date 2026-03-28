@@ -1,0 +1,200 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/questions
+    body:
+      encoding: UTF-8
+      string: '{"question":{"title":"Integration test question?","field_type":"Text","required":false}}'
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Location:
+      - https://api.tito.io/<TITO_ACCOUNT>/test-event-1/questions/integration-test-question
+      Vary:
+      - Accept
+      Etag:
+      - W/"a845767eaf9a15cbae1b0320fdd39365"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - a89c59049e97acd176a3f209a548ca4d
+      X-Runtime:
+      - '0.133843'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"question":{"_type":"question","id":1218752,"answers_count":0,"description":null,"title":"Integration
+        test question?","field_type":"Text","include_free_text_field":false,"options":[],"options_free_text_field":null,"required":false,"slug":"integration-test-question","tickets_count":0,"deletable":true,"public_optional_activity_ids":[],"created_at":"2026-03-28T17:56:10.000-04:00","updated_at":"2026-03-28T17:56:10.000-04:00"},"meta":{"api_version":"3.1.0"}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:10 GMT
+- request:
+    method: patch
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/questions/integration-test-question
+    body:
+      encoding: UTF-8
+      string: '{"question":{"title":"Updated question?"}}'
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Location:
+      - https://api.tito.io/<TITO_ACCOUNT>/test-event-1/questions/integration-test-question
+      Vary:
+      - Accept
+      Etag:
+      - W/"70ee6f5855f02eff7ec5ff10e71eab09"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - ce8354c267dd658071cbc51e16ce9055
+      X-Runtime:
+      - '0.144068'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"question":{"_type":"question","id":1218752,"answers_count":0,"description":null,"title":"Updated
+        question?","field_type":"Text","include_free_text_field":false,"options":[],"options_free_text_field":null,"required":false,"slug":"integration-test-question","tickets_count":0,"deletable":true,"public_optional_activity_ids":[],"created_at":"2026-03-28T17:56:10.000-04:00","updated_at":"2026-03-28T17:56:10.000-04:00"},"meta":{"api_version":"3.1.0"}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:10 GMT
+- request:
+    method: delete
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/questions/integration-test-question
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:11 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - ab3429db3ffdf2262bc205d60e9fe68e
+      X-Runtime:
+      - '0.204588'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 28 Mar 2026 21:56:11 GMT
+recorded_with: VCR 6.4.0

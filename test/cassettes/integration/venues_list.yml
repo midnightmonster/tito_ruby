@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/venues?page%5Bnumber%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"4fe6249e6708cf0da041752d1e0fe28d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - 11d41b8904259ecda033a5f1ee0cc5a0
+      X-Runtime:
+      - '0.077549'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"venues":[{"_type":"venue","id":1065408,"name":"Conference Center","address":"123
+        Main St, Anytown USA","show":true,"created_at":"2026-03-28T17:43:34.000-04:00","updated_at":"2026-03-28T17:43:34.000-04:00","zoomlevel":null,"latitude":null,"longitude":null,"link":null,"position":0,"url":null},{"_type":"venue","id":1065409,"name":"Conference
+        Center","address":"123 Main St, Anytown USA","show":true,"created_at":"2026-03-28T17:43:50.000-04:00","updated_at":"2026-03-28T17:43:50.000-04:00","zoomlevel":null,"latitude":null,"longitude":null,"link":null,"position":0,"url":null}],"meta":{"api_version":"3.1.0","expandable":null,"current_page":1,"next_page":null,"prev_page":null,"total_pages":1,"total_count":2,"per_page":100,"overall_total":2}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:24 GMT
+recorded_with: VCR 6.4.0

@@ -28,10 +28,6 @@ module Tito
         collection_for(Resources::Event, path_suffix: "/archived")
       end
 
-      def webhook_endpoints
-        collection_for(Resources::WebhookEndpoint)
-      end
-
       # -- Event-scoped resources --
 
       def tickets(event: self.event)
@@ -80,6 +76,10 @@ module Tito
 
       def venues(event: self.event)
         collection_for(Resources::Venue, event: event)
+      end
+
+      def webhook_endpoints(event: self.event)
+        collection_for(Resources::WebhookEndpoint, event: event)
       end
 
       private

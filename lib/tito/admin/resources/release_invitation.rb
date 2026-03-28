@@ -21,9 +21,13 @@ module Tito
         attribute :discount_code,  :string
         attribute :expires_at,     :datetime
         attribute :unique_url,     :string
-        attribute :redirect,       :string
-        attribute :created_at,     :datetime
-        attribute :updated_at,     :datetime
+        attribute :redirect,            :boolean
+        attribute :rsvp_list_id,        :integer
+        attribute :registration_id,     :integer
+        attribute :importer_id,         :integer
+        attribute :message_delivery_id, :integer
+        attribute :created_at,          :datetime
+        attribute :updated_at,          :datetime
 
         expandable :registration
       end

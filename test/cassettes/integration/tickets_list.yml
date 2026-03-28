@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/tickets?page%5Bnumber%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"e647d1e6407b4e6f14fd8f30f449b596"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - b6b1c7ab223c2a03772f95c3d978bf4b
+      X-Runtime:
+      - '0.114004'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"tickets":[{"_type":"ticket","id":13427716,"slug":"ti_pcGuREXSKKr2dPgnwgDVOCA","unique_url":"https://ti.to/tickets/ti_pcGuREXSKKr2dPgnwgDVOCA","company_name":"Just
+        Me","job_title":"Second Secretary to the Janitor","email":"joshua@papercrown.org","metadata":null,"first_name":"Joshua","last_name":"Paine","name":"Joshua
+        Paine","number":1,"phone_number":null,"price":0.0,"reference":"XPS5-1","state":"complete","test_mode":false,"registration_id":17066058,"release_id":1625305,"release_archived":false,"avatar_url":"https://secure.gravatar.com/avatar/6294b53ab86a460ca51d7e1ec63b063f?default=https://dt5vdlaz6p3e7.cloudfront.net/avatars/6294b53ab86a460ca51d7e1ec63b063f.png","void":false,"changes_locked":false,"consented_at":null,"discount_code_used":null,"tag_names":[],"created_at":"2026-03-18T19:34:41.000-04:00","updated_at":"2026-03-18T19:34:41.000-04:00","event":{"id":1158813,"title":"Test
+        Event 1","slug":"test-event-1","path":"/<TITO_ACCOUNT>/test-event-1"},"assigned":true,"qr_url":"https://qr.tito.io/tickets/ti_pcGuREXSKKr2dPgnwgDVOCA","show_qr_code":true,"vcard_url":null,"vcard_data":null,"qr_code_disabled":false,"price_less_tax":0.0,"total_paid":0.0,"total_tax_paid":0.0,"total_paid_less_tax":0.0,"tags":null,"lock_changes":null}],"meta":{"api_version":"3.1.0","expandable":{"activities":false,"activity_ids":false,"activity_group_ids":false,"answers":false,"answer_ids":false,"changes_lock_default_description":false,"changes_lock_default_status":false,"chosen_activity_ids":false,"opt_ins":false,"possible_questions":false,"possible_question_ids":false,"questions":false,"question_ids":false,"question_triggers":false,"registration":false,"release":false,"responses":false,"unconditional_question_ids":false,"upgrade_ids":false,"upgrades":false,"voided_at":false,"voided_by":false},"current_page":1,"next_page":null,"prev_page":null,"total_pages":1,"total_count":1,"per_page":100,"overall_total":1,"resources_hidden_by_default_count":0,"search_states_hidden_by_default":["void","archived"],"sort_options":{"First
+        name A-Z":{"attr":"first_name","direction":"asc"},"First name Z-A":{"attr":"first_name","direction":"desc"},"Last
+        name A-Z":{"attr":"last_name","direction":"asc"},"Last name Z-A":{"attr":"last_name","direction":"desc"},"Ticket
+        date, earliest first":{"attr":"tickets.created_at","direction":"asc"},"Ticket
+        date, newest first":{"attr":"tickets.created_at","direction":"desc","default":true},"Price,
+        least first":{"attr":"price","direction":"asc"},"Price, most first":{"attr":"price","direction":"desc"},"Reference":{"attr":"reference","direction":"asc"},"Number":{"attr":"number","direction":"asc"},"Last
+        change":{"attr":"updated_at","direction":"desc"}},"filter_options":{"types":[{"label":"Added
+        manually","value":"manual"},{"label":"Ordered by customer","value":"standard"}],"release_ids":[{"label":"Basic","value":"basic"}],"activity_ids":[{"label":"Workshop:
+        Getting Started","value":"1096234"}],"sections":{"states":{"label":"Status","open":false},"types":{"label":"Type","open":false},"release_ids":{"label":"Tickets","open":false},"activity_ids":{"label":"Activities","open":false},"created_at":{"label":"Timeframe","open":false,"type":"time_frame"}},"states":[{"label":"Complete","value":"complete"},{"label":"Incomplete","value":"incomplete"},{"label":"Unassigned","value":"unassigned"},{"label":"Void","value":"void"},{"label":"Changes
+        Locked","value":"changes_locked"},{"label":"Changes Allowed","value":"changes_allowed"},{"label":"Archived","value":"archived"}],"selected_states":["complete","incomplete","unassigned","changes_locked","changes_allowed"]}}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:17 GMT
+recorded_with: VCR 6.4.0

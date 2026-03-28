@@ -2,14 +2,14 @@ require "test_helper"
 
 class Tito::Admin::Resources::WebhookEndpointTest < Minitest::Test
   def setup
-    @client = Tito::Admin::Client.new(token: "test-token", account: "demo")
+    @client = Tito::Admin::Client.new(token: "test-token", account: "demo", event: "conf")
   end
 
-  def test_account_scoped
-    refute Tito::Admin::Resources::WebhookEndpoint.event_scoped?
+  def test_event_scoped
+    assert Tito::Admin::Resources::WebhookEndpoint.event_scoped?
   end
 
-  def test_collection_does_not_require_event
+  def test_collection_requires_event
     proxy = @client.webhook_endpoints
     assert_instance_of Tito::Admin::CollectionProxy, proxy
   end

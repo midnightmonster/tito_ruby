@@ -42,7 +42,7 @@ module Tito
         attribute :changes_locked,      :boolean
         attribute :lock_changes,        :boolean
         attribute :tags,                :string
-        attribute :event,               :string
+        attribute :event,               :json
         attribute :void,                :boolean
         attribute :metadata,            :json
         attribute :consented_at,        :datetime

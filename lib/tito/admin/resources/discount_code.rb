@@ -24,12 +24,12 @@ module Tito
         attribute :share_url,                             :string
         attribute :description,                           :string
         attribute :description_for_organizer,             :string
-        attribute :show_public_releases,                  :boolean
-        attribute :show_secret_releases,                  :boolean
+        attribute :only_show_attached,                     :boolean
+        attribute :reveal_secret,                          :boolean
+        attribute :show_public_releases,                  :string
+        attribute :show_secret_releases,                  :string
         attribute :block_registrations_if_not_applicable, :boolean
         attribute :disable_for_degressive,                :boolean
-        attribute :created_at,                            :datetime
-        attribute :updated_at,                            :datetime
       end
     end
   end

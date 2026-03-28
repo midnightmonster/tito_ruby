@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/discount_codes?page%5Bnumber%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"65668ce94b1999d59cd95a2b90579553"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - dca2ae360b4be6c3e378a30b0df5dc0c
+      X-Runtime:
+      - '0.105709'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"discount_codes":[{"_type":"discount_code","id":9285709,"code":"TESTCODE50","description":"Sell
+        for 50.0% less. Unlimited. Applies to 0 tickets. Not used yet.","description_for_organizer":null,"end_at":null,"max_quantity_per_release":null,"min_quantity_per_release":null,"only_show_attached":false,"quantity":null,"quantity_used":0,"registrations_count":0,"reveal_secret":false,"show_public_releases":"all","show_secret_releases":"none","share_url":"https://ti.to/<TITO_ACCOUNT>/test-event-1/discount/TESTCODE50","start_at":null,"state":"current","tickets_count":0,"type":"PercentOffDiscountCode","value":"50.0","block_registrations_if_not_applicable":false,"disable_for_degressive":false}],"meta":{"api_version":"3.1.0","expandable":{"releases":false,"release_ids":false,"release_slugs":false},"current_page":1,"next_page":null,"prev_page":null,"total_pages":1,"total_count":1,"per_page":100,"overall_total":1,"resources_hidden_by_default_count":0,"search_states_hidden_by_default":["past"],"sort_options":{"Code
+        A-Z":{"attr":"code","direction":"asc"},"Code Z-A":{"attr":"code","direction":"desc","default":true}},"filter_options":{"sections":{"states":{"label":"Status","open":false}},"states":[{"label":"Current","value":"current"},{"label":"Past","value":"past"},{"label":"Upcoming","value":"upcoming"},{"label":"Used","value":"used"},{"label":"Unused","value":"unused"}],"selected_states":["current","upcoming","used","unused"]}}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:26 GMT
+recorded_with: VCR 6.4.0

@@ -8,11 +8,15 @@ require "minitest/autorun"
 require "vcr"
 require "webmock/minitest"
 
+TITO_TEST_TOKEN   = ENV.fetch("TITO_TOKEN", "<TITO_TOKEN>")
+TITO_TEST_ACCOUNT = ENV.fetch("TITO_ACCOUNT", "<TITO_ACCOUNT>")
+TITO_TEST_EVENT   = "test-event-1"
+
 VCR.configure do |config|
   config.cassette_library_dir = File.expand_path("cassettes", __dir__)
   config.hook_into :webmock
-  config.filter_sensitive_data("<TITO_TOKEN>") { ENV["TITO_TOKEN"] }
-  config.filter_sensitive_data("<TITO_ACCOUNT>") { ENV["TITO_ACCOUNT"] }
+  config.filter_sensitive_data("<TITO_TOKEN>") { TITO_TEST_TOKEN }
+  config.filter_sensitive_data("<TITO_ACCOUNT>") { TITO_TEST_ACCOUNT }
   config.default_cassette_options = { record: :once }
 end
 

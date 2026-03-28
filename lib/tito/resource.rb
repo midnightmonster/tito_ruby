@@ -84,6 +84,8 @@ module Tito
           Tito::Admin::CollectionProxy.new(scope: child_scope)
         end
       end
+
+      def attribute_names_set = @attribute_names_set ||= attribute_names.to_set
     end
 
     attr_reader :_scope
@@ -91,9 +93,10 @@ module Tito
     def initialize(_scope: nil, **attrs)
       @_scope = _scope
       @_persisted = !!(attrs[:id] || attrs[:slug] || attrs["id"] || attrs["slug"])
-      # Normalize string keys to symbols for ActiveModel
-      normalized = attrs.transform_keys(&:to_sym).except(:_type)
-      super(**normalized)
+      # Drop unknown attributes
+      known = self.class.attribute_names_set
+      allowed = attrs.select { |k, _| known.include?(k.to_s) }
+      super(**allowed)
       clear_changes_information if @_persisted
     end
 

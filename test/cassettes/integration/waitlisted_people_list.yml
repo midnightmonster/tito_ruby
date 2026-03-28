@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/waitlisted_people?page%5Bnumber%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"b4d4c925d125e34cbe920c0d4391d283"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - a4d3dde46b05dc0ced20099226cdbc28
+      X-Runtime:
+      - '0.088286'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"waitlisted_people":[],"meta":{"api_version":"3.1.0","expandable":null,"current_page":1,"next_page":null,"prev_page":null,"total_pages":0,"total_count":0,"per_page":100,"overall_total":0,"resources_hidden_by_default_count":0,"search_states_hidden_by_default":["redeemed","rejected","expired"],"sort_options":{"Name
+        A-Z":{"attr":"name","direction":"asc"},"Name Z-A":{"attr":"name","direction":"desc"},"Join
+        date, earliest first":{"attr":"created_at","direction":"asc"},"Join date,
+        newest first":{"attr":"created_at","direction":"desc","default":true}},"filter_options":{"release_slugs":[],"sections":{"states":{"label":"Status","open":false},"release_slugs":{"label":"Tickets","open":false}},"states":[{"label":"Joined","value":"joined"},{"label":"Offered","value":"offered"},{"label":"Redeemed","value":"redeemed"},{"label":"Rejected","value":"rejected"},{"label":"Expired","value":"expired"}],"selected_states":["joined","offered"]}}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:24 GMT
+recorded_with: VCR 6.4.0

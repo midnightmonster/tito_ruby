@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/releases/basic
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"7c3afc08027bb435398a18a6516e72cd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - c11c4caf449665c29489f7f58328a379
+      X-Runtime:
+      - '0.089220'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"release":{"_type":"release","id":1625305,"event_id":1158813,"created_at":"2026-03-18T19:32:10.000-04:00","updated_at":"2026-03-18T19:32:18.000-04:00","slug":"basic","title":"Basic","description":"It''s
+        a ticket. What do you want?","archived":false,"card_payments":true,"default_quantity":null,"donation":false,"enable_super_combo_summary":true,"end_at":null,"has_success_message":false,"has_fail_message":false,"invoice":false,"max_donation":null,"max_tickets_per_person":null,"metadata":null,"min_tickets_per_person":null,"min_donation":null,"not_a_ticket":false,"show_qr_code":true,"only_issue_combos":false,"pricing_type":"free","payment_type":"free","position":0,"price":null,"price_ex_tax":0.0,"tax_exclusive":false,"price_degressive":null,"price_degressive_list":[],"quantity":null,"request_company_name":true,"request_job_title":true,"request_vat_number":false,"require_vat_number":false,"require_billing_address":null,"require_credit_card_for_sold_out_waiting_list":false,"require_email":true,"require_name":true,"secret":false,"show_price":true,"suggested_donation":null,"lock_changes":null,"state_name":"on_sale","start_at":null,"waiting_list_enabled_during_locked":false,"waiting_list_enabled_during_sold_out":false,"share_url":"https://ti.to/<TITO_ACCOUNT>/test-event-1/with/basic","tickets_count":1,"locked":false,"waiting_list":false,"sold_out":false,"off_sale":false,"expired":false,"upcoming":false,"allocatable":true,"changes_locked":false,"deletable":false,"display_price":0.0,"gross_income":0.0,"full_price_tickets_count":0,"free_tickets_count":1,"discounted_tickets_count":0,"voided_tickets_count":0,"pending_waiting_list":false,"show_company_name":true,"require_company_name":false,"show_job_title":true,"require_job_title":false,"show_vat_number":false,"show_discount_code_field_here":false,"show_phone_number":false,"tax_description":null,"warnings":{}},"meta":{"api_version":"3.1.0","expandable":{"activities":false,"activity_questions":false,"combo_releases":false,"public_optional_activities":false,"questions":false,"super_combo_releases":false,"tax_components":false,"tax_types":false,"termset":false,"ticket_group":false}}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:09 GMT
+recorded_with: VCR 6.4.0

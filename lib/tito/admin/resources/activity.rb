@@ -19,9 +19,8 @@ module Tito
         attribute :capacity,         :integer
         attribute :allocation_count, :integer
         attribute :sold_out,         :boolean
-        attribute :show_to_attendee, :boolean
-        attribute :created_at,       :datetime
-        attribute :updated_at,       :datetime
+        attribute :kind,             :string
+        attribute :any_live_chosen_tickets, :boolean
 
         expandable :questions, :releases, :upgrades, :venue
 

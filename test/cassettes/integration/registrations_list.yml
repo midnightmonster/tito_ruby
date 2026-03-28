@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tito.io/v3/<TITO_ACCOUNT>/test-event-1/registrations?page%5Bnumber%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token=<TITO_TOKEN>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Mar 2026 21:56:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Vary:
+      - Accept
+      Etag:
+      - W/"d21644de38fcb3cb779864ccc9f8f0ca"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - user.id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1URTVNalUyTUE9PSIsImV4cCI6bnVsbCwicHVyIjoiY29va2llLnVzZXIuaWQifX0%3D--5f9b75e5a93aebada18cf2bc4b797d3dddbefa6a;
+        path=/; secure
+      X-Request-Id:
+      - 599b70bc493980d21191e5fc0b148977
+      X-Runtime:
+      - '0.104114'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,Tito-Session-Id,Tito-Test-Mode,User-Agent,X-Requested-With
+    body:
+      encoding: UTF-8
+      string: '{"registrations":[{"_type":"registration","id":17066058,"slug":"reg_p2V5AFv9SDZwWGGzVzq5LwQ","created_at":"2026-03-18T19:34:04.000-04:00","updated_at":"2026-03-18T19:34:41.000-04:00","completed_at":"2026-03-18T19:34:41.000-04:00","discount_code":null,"email":"joshua@papercrown.org","job_title":"Second
+        Secretary to the Janitor","expires_at":"2026-03-18 19:49:04 -0400","ip_address":"47.203.246.30","locale":"en","metadata":null,"name":"Joshua
+        Paine","company_name":"Just Me","payment_reference":null,"payment_option_name":null,"phone_number":null,"purchase_order_number":null,"registration_type":"standard","reference":"XPS5","source":null,"state":"complete","test_mode":false,"cancelled":false,"cancelled_at":null,"cancelled_by":null,"free":true,"paid":false,"invoice":false,"manual":false,"imported":false,"refundable":false,"refunded":false,"partially_refunded":false,"receipt_paid":true,"receipt_number":"0000001","receipt_id":10318121,"payment_incomplete":false,"payment_complete":false,"total":0.0,"tickets_count":1,"consented_at":null,"event":{"id":1158813,"title":"Test
+        Event 1","slug":"test-event-1","path":"/<TITO_ACCOUNT>/test-event-1"},"terms_accepted":false,"termset_ids":[],"editable_total_and_prices":false,"total_less_tax":0.0,"discount_code_id":null,"payment_option_provider_name":null,"quantities":{"basic":{"release":"Basic","quantity":1}}}],"meta":{"api_version":"3.1.0","expandable":{"billing_address":false,"line_items":false,"receipts":false,"refunds":false,"tickets":false},"current_page":1,"next_page":null,"prev_page":null,"total_pages":1,"total_count":1,"per_page":100,"overall_total":1,"resources_hidden_by_default_count":0,"search_states_hidden_by_default":["cancelled"],"sort_options":{"Name
+        A-Z":{"attr":"name","direction":"asc"},"Name Z-A":{"attr":"name","direction":"desc"},"Purchase
+        date, earliest first":{"attr":"created_at","direction":"asc"},"Purchase date,
+        newest first":{"attr":"created_at","direction":"desc"},"Total paid, least
+        first":{"attr":"total","direction":"asc"},"Total paid, most first":{"attr":"total","direction":"desc","default":true},"Reference":{"attr":"reference","direction":"asc"},"Payment
+        provider":{"attr":"payment_provider","direction":"asc"},"Last change":{"attr":"updated_at","direction":"desc"}},"filter_options":{"sections":{"states":{"label":"Status","open":false}},"states":[{"label":"Paid","value":"paid"},{"label":"Unpaid","value":"unpaid"},{"label":"Complete","value":"complete"},{"label":"Confirmed","value":"confirmed"},{"label":"Incomplete","value":"incomplete"},{"label":"Cancelled","value":"cancelled"}],"selected_states":["paid","unpaid","complete","confirmed","incomplete"]}}}'
+  recorded_at: Sat, 28 Mar 2026 21:56:21 GMT
+recorded_with: VCR 6.4.0
