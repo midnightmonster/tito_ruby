@@ -2,7 +2,7 @@
 
 A Ruby client for the [Tito](https://ti.to) Admin API v3.
 
-**WARNING:** This is pre-release, mostly-Claude-code-generated, mostly-untested software. It mostly doesn't work at all. Only the Tickets resource is known even to successfully load data. Use at your own risk.
+**WARNING:** This is a very early release, and I'm only using a small portion of it, so although we have automated tests, most of them are not backed up by real-world experience.
 
 ## Installation
 
@@ -98,14 +98,29 @@ client.tickets
   .each { |t| puts t.reference }
 ```
 
-### Available Resources
+### Resource Status
 
-- Events, Releases, Tickets, Registrations
-- Activities, Questions, Answers
-- Discount Codes, Checkin Lists
-- Opt-Ins, Interested Users, RSVP Lists
-- Release Invitations, Waitlisted People
-- Webhook Endpoints, Refunds, Venues
+| Resource | List | Find | Create | Update | Delete | Notes |
+|----------|------|------|--------|--------|--------|-------|
+| Events | :white_check_mark: | :white_check_mark: | :grey_question: | :grey_question: | :grey_question: | Account-scoped |
+| Releases | :white_check_mark: | :white_check_mark: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| Tickets | :white_check_mark: | :white_check_mark: | :grey_question: | :grey_question: | N/A | |
+| Registrations | :white_check_mark: | :white_check_mark: | :grey_question: | :grey_question: | N/A | |
+| Questions | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | |
+| Answers | :grey_question: | :grey_question: | N/A | N/A | N/A | Nested under Questions |
+| Discount Codes | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| Activities | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| Checkin Lists | :x: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | List broken by Tito API bug |
+| Opt-Ins | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| Interested Users | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| RSVP Lists | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | |
+| Release Invitations | :white_check_mark: | :grey_question: | :grey_question: | :grey_question: | :grey_question: | Nested under RSVP Lists |
+| Webhook Endpoints | :white_check_mark: | :grey_question: | :white_check_mark: | :grey_question: | :white_check_mark: | Event-scoped |
+| Waitlisted People | :white_check_mark: | :grey_question: | :grey_question: | :grey_question: | :grey_question: | |
+| Refunds | :grey_question: | :grey_question: | N/A | N/A | N/A | Nested under Registrations |
+| Venues | :white_check_mark: | :grey_question: | :grey_question: | :grey_question: | :grey_question: | |
+
+:white_check_mark: = tested against live API&ensp; :grey_question: = implemented but untested&ensp; :x: = known broken
 
 ## Development
 
