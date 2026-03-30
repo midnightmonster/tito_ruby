@@ -122,6 +122,33 @@ client.tickets
 
 :white_check_mark: = tested against live API&ensp; :grey_question: = implemented but untested&ensp; :x: = known broken
 
+## Logging
+
+In a Rails app, request logging is enabled automatically via `Rails.logger`. You'll see output like:
+
+```
+request: GET https://api.tito.io/v3/letterblock/test-event-1/tickets?page%5Bnumber%5D=1
+response: Status 200
+```
+
+Outside of Rails, set a logger manually:
+
+```ruby
+Tito.logger = Logger.new(STDOUT)
+```
+
+Or via the configure block:
+
+```ruby
+Tito.configure do |config|
+  config.logger = Logger.new(STDOUT)
+end
+```
+
+This uses Faraday's built-in logger middleware, omitting headers and bodies. Set `Tito.logger = nil` to disable.
+
+Note: the logger is captured when the first request is made on a client. If you set `Tito.logger` after a client has already been used, create a new client for it to take effect.
+
 ## Development
 
 ```

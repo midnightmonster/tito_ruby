@@ -28,6 +28,7 @@ module Tito
         f.headers["Authorization"] = "Token token=#{@token}"
         f.headers["Accept"] = "application/json"
         f.request :json
+        f.response :logger, Tito.logger, headers: false, bodies: false if Tito.logger
         f.response :json, content_type: /\bjson$/
       end
     end

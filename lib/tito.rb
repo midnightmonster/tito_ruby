@@ -51,11 +51,21 @@ module Tito
       @configuration ||= Configuration.new
     end
 
+    def logger
+      configuration.logger
+    end
+
+    def logger=(logger)
+      configuration.logger = logger
+    end
+
     def reset_configuration!
       @configuration = Configuration.new
     end
   end
 end
+
+require "tito/railtie" if defined?(Rails::Railtie)
 
 # Register custom types
 ActiveModel::Type.register(:string_array, Tito::Types::StringArray)
