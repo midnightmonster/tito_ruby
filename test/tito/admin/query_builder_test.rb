@@ -11,13 +11,13 @@ class Tito::Admin::QueryBuilderTest < Minitest::Test
   def test_where_array_pluralizes_key
     @qb.add_where(state: %w[incomplete unassigned])
     params = @qb.to_params
-    assert_equal %w[incomplete unassigned], params["search[states][]"]
+    assert_equal %w[incomplete unassigned], params["search[states]"]
   end
 
   def test_where_array_does_not_double_pluralize
     @qb.add_where(states: %w[complete])
     params = @qb.to_params
-    assert_equal %w[complete], params["search[states][]"]
+    assert_equal %w[complete], params["search[states]"]
   end
 
   # -- where with ranges --
@@ -129,7 +129,7 @@ class Tito::Admin::QueryBuilderTest < Minitest::Test
     @qb.set_per_page(50)
 
     params = @qb.to_params
-    assert_equal %w[complete], params["search[states][]"]
+    assert_equal %w[complete], params["search[states]"]
     assert_equal "last_name", params["sort"]
     assert_equal "Ada", params["q"]
     assert_equal 50, params["page[size]"]

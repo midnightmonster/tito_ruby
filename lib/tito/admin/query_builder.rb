@@ -73,7 +73,7 @@ module Tito
           when Array
             plural_key = key.to_s
             plural_key = plural_key.end_with?("s") ? plural_key : "#{plural_key}s"
-            params["search[#{plural_key}][]"] = value.map(&:to_s)
+            params["search[#{plural_key}]"] = value.map(&:to_s)
           when Range
             if value.begin
               params["search[#{key}][gte]"] = format_value(value.begin)
