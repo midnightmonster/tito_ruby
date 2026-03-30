@@ -1,6 +1,13 @@
 # Changelog
 
-## 0.2.0 (Unreleased)
+## 0.3.0 (Unreleased)
+
+- Added request logging via Faraday's built-in logger middleware
+- Added `Tito.logger` / `Tito.logger=` for easy logger configuration
+- Added Rails Railtie that auto-sets `Tito.logger = Rails.logger`
+- Fixed QueryBuilder array params adding an extra `[]` suffix (e.g. `where(state: ["complete"])` now sends correctly)
+
+## 0.2.0
 
 - Updated all resource definitions to match actual Tito API v3 responses
 - Fixed Resource to silently drop unknown attributes from API responses instead of crashing
