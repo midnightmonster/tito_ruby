@@ -67,7 +67,7 @@ class Tito::Admin::QueryBuilderTest < Minitest::Test
   def test_search_adds_q_param
     @qb.add_search("Jimmy")
     params = @qb.to_params
-    assert_equal "Jimmy", params["q"]
+    assert_equal "Jimmy", params["search[q]"]
   end
 
   # -- order --
@@ -131,7 +131,7 @@ class Tito::Admin::QueryBuilderTest < Minitest::Test
     params = @qb.to_params
     assert_equal %w[complete], params["search[states]"]
     assert_equal "last_name", params["sort"]
-    assert_equal "Ada", params["q"]
+    assert_equal "Ada", params["search[q]"]
     assert_equal 50, params["page[size]"]
   end
 

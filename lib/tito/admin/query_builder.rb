@@ -49,7 +49,7 @@ module Tito
       def to_params
         params = {}
         params["page[size]"] = @per_page if @per_page
-        params["q"] = @search_term if @search_term
+        params["search[q]"] = @search_term if @search_term
         params.merge!(expand_params)
         params.merge!(where_params)
         params.merge!(order_params)
