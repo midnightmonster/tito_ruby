@@ -1,6 +1,12 @@
 # Changelog
 
-## 0.3.0 (Unreleased)
+## 0.4.0 (Unreleased)
+
+- Fixed Resource to declare expandable fields as JSON attributes so expanded data can be read
+- Fixed QueryBuilder freeform search param (now `search[q]` instead of `q`)
+- Ticket resource exposes expandable `activities_ids` and `answer_ids`
+
+## 0.3.0
 
 - Added request logging via Faraday's built-in logger middleware
 - Added `Tito.logger` / `Tito.logger=` for easy logger configuration
