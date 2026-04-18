@@ -49,7 +49,7 @@ module Tito
         attribute :created_at,          :datetime
         attribute :updated_at,          :datetime
 
-        expandable :activities, :answers, :opt_ins, :registration, :release, :responses, :upgrade_ids
+        expandable :activities, :activities_ids, :answers, :answer_ids, :opt_ins, :registration, :release, :responses, :upgrade_ids
 
         action :void!,     method: :post, path: "void"
         action :reassign!, method: :post, path: "reassignments"
