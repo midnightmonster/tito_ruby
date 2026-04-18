@@ -58,6 +58,7 @@ module Tito
       end
 
       def expandable(*names)
+        names.each { attribute it, :json }
         @_expandable_fields = names
       end
 
