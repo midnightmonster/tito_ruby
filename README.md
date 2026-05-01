@@ -1,6 +1,6 @@
 # Tito Ruby
 
-A Ruby client for the [Tito](https://ti.to) Admin API v3.
+A Ruby client for the [Tito](https://ti.to) Admin API v3.1.
 
 **WARNING:** This is a very early release, and I'm only using a small portion of it, so although we have automated tests, most of them are not backed up by real-world experience.
 
